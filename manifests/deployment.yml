@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: victordelangelspringpetcliniccloud 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: victordelangelspringpetcliniccloud
+  template:
+    metadata:
+      labels:
+        app: victordelangelspringpetcliniccloud 
+    spec:
+      containers:
+        - name: victordelangelspringpetcliniccloud 
+          image: videlaregistry.azurecr.io/victordelangelspringpetcliniccloud
+          ports:
+          - containerPort: 80
